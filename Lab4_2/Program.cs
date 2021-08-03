@@ -1,7 +1,8 @@
 ﻿using System;
 
 namespace Lab4_2
-{
+{ //***the special note that Jeff wanted us to put in is below***
+    //MenuItem Lolipop = new MenuItem();//says MenuItem does not contain a constructor that takes 0 arugments
     class MenuItem
     {
         private int ID;
@@ -13,7 +14,7 @@ namespace Lab4_2
         //first one takes all 4 params
         public MenuItem(int _ID, string _Name, string _Description, decimal _Price)
         {
-            SetID(_ID);
+            SetID(_ID);//use equal there//no don't.
             SetName(_Name);
             SetDescription(_Description);
             SetPrice(_Price);
@@ -28,7 +29,7 @@ namespace Lab4_2
             SetPrice(_Price);
         }
 
-
+        //should i make a print method too?
 
         //make setters and getters
         public int GetID()
@@ -76,7 +77,7 @@ namespace Lab4_2
 
         public override string ToString()
         {
-            return $"\nID: {ID}:\nName: {Name}:\nDescription: {Description}:\nPrice: {Price}";
+            return $"\nID: {ID}\nName: {Name}\nDescription: {Description}\nPrice: {Price}";
         }
 
     }
@@ -86,13 +87,27 @@ namespace Lab4_2
         static void Main(string[] args)
         {//create several instancces of MenuItem.
 
-          //Print out the details of each one using Writeline and passing the object.
+        MenuItem Broccoli = new MenuItem(01, "Broccoli", "Steamed Brocc", 3.00m);//was having an issue but had wrong brackets.
+            MenuItem Apple = new MenuItem(02, "Apple", 2.00m);
+            MenuItem Potato = new MenuItem(03, "Potato", 1.00m);
+            MenuItem Chips = new MenuItem(04, "Chips", "Lays potato Chips", 0.40m);//testing my price params
+            MenuItem Cake = new MenuItem(05, "Cake", "", 10.00m);
 
+
+            //Print out the details of each one using Writeline and passing the object.
+            Console.WriteLine(Broccoli);
+            Console.WriteLine(Apple);
+            Console.WriteLine(Potato);
+            Console.WriteLine(Chips);
+            Console.WriteLine(Broccoli.GetDescription());
+            Console.WriteLine(Apple.GetPrice());
+            Console.WriteLine(Cake);
 
             //then can try createing a MenuItem using a default constructor and notice the error. 
             //it is not in the sheet. but i think he said put a statement at the top with notes from the error.
             //but comment out the error lines.
-           
+            //MenuItem Lolipop = new MenuItem();//says MenuItem does not contain a constructor that takes 0 arugments
+
         }
     }
 }
